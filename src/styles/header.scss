@@ -1,16 +1,15 @@
-$primary-color: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #208f6a;
+@import './abstracts/variables.scss';
+@import './abstracts/mixins.scss';
 
-$color-gray: #777;
-$color-white: #fff;
-$color-black: #000;
+@import './base/animation.scss';
+@import './components/button.scss';
+
 
 .header {
   height: 95vh;
-  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7)), url('../images/jonatan-pie-EvKBHBGgaUo-unsplash.jpg');
+  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7)), url('../images/hero.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -65,115 +64,3 @@ $color-black: #000;
   }
 }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  /* 80% {
-    transform: translateX(10px);
-  } */
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  /* 80% {
-    transform: translateX(-10px);
-  } */
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 100;
-    transform: translate(0);
-  }
-}
-
-.btn {
-  &:link, &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-  
-    /* transition fica no estado inicial */
-    transition: all .2s;
-    
-    /* essa position é a referência para o after do botão */
-    position: relative;
-    font-size: 1.6rem;
-  }
-  
-  &:hover {
-    /* move botão para cima */
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black,.2);
-  }
-  
-  &:active {
-    /* move botão para baixo */
-    transform: translatey(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-  }
-  
-  &--white {
-    background-color: $color-white;
-    color: $color-gray;
-
-    &::after {
-      background-color: $color-white;
-    }
-    
-  }
-  
-  &::after {
-    /* content DEVE estar especificado para que funcione */
-    content: "";
-    /* mesmo display, height, width, border-radius... do botão para ser igual */
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    /* leva after para tras */
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* posição do elemento */
-    z-index: -1;
-    /* animação no estado incial */
-    transition: all .4s;
-  }
-  
-  &:hover::after {
-    /* scale aumenta a escala */
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-  }
-  
-  &--animated {
-    /* .75s é odelay */
-    animation: moveInButton 3s ease-out .75s;
-    animation-fill-mode: backwards;
-  }
-}
