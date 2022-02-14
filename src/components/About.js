@@ -5,6 +5,10 @@ import '../styles/components/button.scss';
 
 import '../styles/about.scss';
 
+import nature1 from '../images/nat-1-large.jpg';
+import nature2 from '../images/nat-2-large.jpg';
+import nature3 from '../images/nat-3-large.jpg';
+
 export default function About() {
   return (
     <main>
@@ -31,7 +35,11 @@ export default function About() {
           </div>
 
           <div className="image-content">
-            image content
+            <div className="composition">
+              <img src={nature1} alt="Nature 1" className='composition__photo composition__photo--p1' />
+              <img src={nature2} alt="Nature 2" className='composition__photo composition__photo--p2' />
+              <img src={nature3} alt="Nature 3" className='composition__photo composition__photo--p3' />
+            </div>
           </div>
 
         </section>
