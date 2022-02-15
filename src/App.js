@@ -1,5 +1,6 @@
 import './App.scss';
 import About from './components/About';
+import Featurs from './components/Featurs';
 import Header from './components/Header';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <About />
+      <Featurs />
     </>
   );
 }

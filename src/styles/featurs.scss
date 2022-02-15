@@ -1,0 +1,49 @@
+@import './abstracts/variables.scss';
+@import './abstracts/mixins.scss';
+
+@import './base/animation.scss';
+@import './components/button.scss';
+
+.section-featurs {
+  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../images/nat-4.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20rem 0;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.featurs-individual-card  {
+  background-color: rgba($color-white, .8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  margin-inline: 3rem;
+  width: 15%;
+  transition: transform .3s;
+
+  .featurs-icon {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    // display: inline-block;
+    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    // -webkit-background-clip: text;
+    // color: transparent;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
