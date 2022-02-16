@@ -1,8 +1,4 @@
 @import './abstracts/variables.scss';
-@import './abstracts/mixins.scss';
-
-@import './base/animation.scss';
-@import './components/button.scss';
 
 .section-featurs {
   background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../images/nat-4.jpg');

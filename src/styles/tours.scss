@@ -1,0 +1,58 @@
+@import './abstracts//variables.scss';
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  padding: 25rem 0 38rem;
+  margin-top: -12vh;
+}
+
+.tours-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.card {
+  width: 20%;
+  // vai dar um efeito menos 2d
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &-side {
+    height: 50rem;
+    margin-inline: 5%;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-front {
+      background-color: $color-white;
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+  }
+
+  &:hover &-side-front {
+    transform: rotateY(180deg);
+  }
+
+  // aqui ela já esta rotacionada, volta para o zero
+  &:hover &-side-back {
+    transform: rotateY(0);
+  }
+}
