@@ -1,4 +1,6 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
+
 import maryImage from '../images/nat-8.jpg';
 import jackImage from '../images/nat-9.jpg';
 
@@ -38,7 +40,10 @@ export default function Stories() {
         </div>
 
         <div className="u-center-text">
-          <a href="#" className="btn-text all-stories-btn"> Read all stories</a>
+          <a href="#" className="btn-text all-stories-btn">
+            Read all stories
+            <Icon icon="akar-icons:arrow-right" className="btn-arrow" />
+          </a>
         </div>
 
     </section>

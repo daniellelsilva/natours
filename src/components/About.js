@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 
 import '../styles/abstracts/utilities.scss';
 import '../styles/components/button.scss';
@@ -31,7 +32,10 @@ export default function About() {
             </h3>
             <p className="paragraph">Aut vero delectus vel accusamus consequatur qui magni itaque et molestias ipsa est assumenda asperiores. Qui sunt expedita quo quos ipsum et saepe dolorum et consequatur ratione. </p>
 
-            <a className="btn-text" href="#">Learn more</a>
+            <a className="btn-text" href="#">
+              Learn more
+              <Icon icon="akar-icons:arrow-right" className="btn-arrow" />
+            </a>
           </div>
 
           <div className="image-content">
