@@ -3,12 +3,23 @@ import { Icon } from '@iconify/react';
 
 import maryImage from '../images/nat-8.jpg';
 import jackImage from '../images/nat-9.jpg';
+import backgroundVideo from '../images/video.mp4'
+import backgroundVideo2 from '../images/video.webm';
 
 import '../styles/stories.scss';
 
 export default function Stories() {
   return (
     <section className="stories-section">
+
+      <div className="bg-video">
+        <video className="bg-video-content" autoPlay muted loop>
+          <source src={backgroundVideo} type="video/mp4" />
+          <source src={backgroundVideo2} type="video/webm" />
+          Your browser is not supported!
+        </video>
+      </div>
+
       <div className="u-center-text">
           <h2 className="heading-secondary" >
             We make people genuinely happy

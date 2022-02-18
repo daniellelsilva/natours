@@ -1,15 +1,16 @@
 @import './abstracts//variables.scss';
+@import './components/bg-video.scss';
 
 .stories-section {
   padding: 15rem 0;
-  background-color: $color-gray-light-1;
+  position: relative;
 }
 
 .story {
   width: 60%;
   margin: 0 auto;
   box-shadow:  0 3rem 6rem rgba($color-black, .1);
-  background-color: $color-white;
+  background-color: rgba($color-white, .6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
