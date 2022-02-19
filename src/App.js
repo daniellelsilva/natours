@@ -4,6 +4,7 @@ import Featurs from './components/Featurs';
 import Header from './components/Header';
 import Tours from './components/Tours';
 import Stories from './components/Stories';
+import Booking from './components/Booking';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Featurs />
       <Tours />
       <Stories />
+      <Booking />
     </>
   );
 }
