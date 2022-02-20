@@ -60,6 +60,19 @@
 
 
   &-label {
+   font-size: 1.2rem;
+   font-weight: 700;
+   margin: .7rem 0 0 2rem;
+   display: block;
+   transition: all .3s;
+  }
 
+  // quando o placeholder estiver em tela, a label fica escondida
+  &-input:placeholder-shown + &-label {
+    opacity: 0;
+    // colocar opacidade pq somenente a visibilidade não iria nos permitir animar com o transition
+    visibility: hidden;
+    // vai fazer a label descer
+    transform: translateY(-4rem);
   }
 }
