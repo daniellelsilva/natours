@@ -17,13 +17,13 @@ export default function Booking() {
            <form className="form">
 
             <div className="form-group">
-              <input type="text" placeholder="Full Name" id="name" required />
-              <label for="name" className="form-label">Full Name</label>
+              <input className="form-input" type="text" placeholder="Full Name" id="name" required />
+              <label for="name" className="form-label" className="form-label">Full Name</label>
             </div>
 
             <div className="form-group">
-              <input type="email" placeholder="Email address" id="email" required />
-              <label for="email" className="form-label">Email Address</label>
+              <input className="form-input" type="email" placeholder="Email address" id="email" required />
+              <label for="email" className="form-label" className="form-label">Email Address</label>
             </div>
                 
              
