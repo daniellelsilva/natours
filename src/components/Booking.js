@@ -23,9 +23,30 @@ export default function Booking() {
 
             <div className="form-group">
               <input className="form-input" type="email" placeholder="Email address" id="email" required />
-              <label for="email" className="form-label">Email Address</label>
+              <label htmlFor="email" className="form-label">Email Address</label>
+            </div>
+
+            <div className="form-group">
+              <div className="form-radio-group">
+                <input type="radio" className="form-radio-input" id="small" name="size"/>
+                <label htmlFor="small" className="form-radio-label">
+                  <span className="form-radio-btn"></span>
+                  Small tour grup
+                </label>
+              </div>
+
+              <div className="form-radio-group">
+                <input type="radio" className="form-radio-input" id="large" name="size"/>
+                <label htmlFor="large" className="form-radio-label">
+                  <span className="form-radio-btn"></span>
+                  Large tour grup
+                </label>
+              </div>
             </div>
                 
+            <div className="form-group">
+              <button className="btn btn--green btn-next-step">Next step</button>
+            </div>
              
            </form>
          </div>

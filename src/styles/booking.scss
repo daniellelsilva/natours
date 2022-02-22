@@ -16,7 +16,7 @@
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-  height: 50rem;
+  height: 55rem;
 
   &-form {
     width: 50%;
@@ -42,6 +42,7 @@
     display: block;
     // setar cor transparente aqui para não desconfigurar quando a border aparece no focus
     border-bottom: 3px solid transparent;
+    transition: all .4s;
 
       &::-webkit-input-placeholder {
         color: $color-grey-dark-1;
@@ -75,4 +76,59 @@
     // vai fazer a label descer
     transform: translateY(-4rem);
   }
+
+  &-radio-group {
+    width: 50%;
+    display: inline-block;
+  }
+
+  &-radio-input {
+    display: none;
+  }
+
+  &-radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  &-radio-btn {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.1rem;
+      width: 1.1rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  // pega o irmão direto do radio input (que é a label) e vai pegar o span que está dentro da label 
+  &-radio-input:checked ~ &-radio-label &-radio-btn::after {
+    opacity: 1;
+  }
+}
+
+#small, #large {
+  width: fit-content;
+}
+
+.btn-next-step {
+  margin: 2rem 0;
 }
