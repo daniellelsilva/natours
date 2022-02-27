@@ -6,7 +6,7 @@ export default function Menu() {
   return (
     <div className="navigation">
       <input type="checkbox" className="navigation-checkbox" id="nav-toggle" />
-      <label htmlFor="nav-toggle" className="navigation-btn">MENU</label>
+      <label htmlFor="nav-toggle" className="navigation-btn"><span className="navigation-icon"></span></label>
 
       <div className="navigation-background" />
 

@@ -15,6 +15,8 @@
     right: 6rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    text-align: center;
+    cursor: pointer;
   }
 
   &-background {
@@ -92,5 +94,50 @@
   &-checkbox:checked ~ &-nav {
     opacity: 1;
     width: 100%;
+  }
+
+  &-icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &, &::before, &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-2;
+      display: inline-block;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {top: -.8rem;}
+    &::after {top: .8rem;}
+  }
+
+  &-btn:hover &-icon::before {
+    top: -1rem;
+  }
+
+  &-btn:hover &-icon::after {
+    top: 1rem;
+  }
+
+  &-checkbox:checked + &-btn &-icon {
+    // vai fazer o span sumir deixando só o before e after, se excluir ambos somem
+    background-color: transparent;
+  }
+
+  &-checkbox:checked + &-btn &-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &-checkbox:checked + &-btn &-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
