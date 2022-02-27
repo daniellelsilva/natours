@@ -6,10 +6,12 @@ import Tours from './components/Tours';
 import Stories from './components/Stories';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <>
+      <Menu />
       <Header />
       <About />
       <Featurs />
