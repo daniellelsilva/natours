@@ -7,6 +7,7 @@ import Stories from './components/Stories';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
+import Popup from './components/Popup';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Stories />
       <Booking />
       <Footer/>
+      <Popup />
     </>
   );
 }
