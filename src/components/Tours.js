@@ -37,7 +37,7 @@ export default function Tours() {
                   <p className="card-price-only">Only</p>
                   <p className="card-price-value">$297</p>
                 </div>
-                <a href="#" className="btn btn--white">Book Now!</a>
+                <a href="#popup" className="btn btn--white">Book Now!</a>
               </div>
             </div>
             
@@ -68,7 +68,7 @@ export default function Tours() {
                   <p className="card-price-only">Only</p>
                   <p className="card-price-value">$497</p>
                 </div>
-                <a href="#" className="btn btn--white">Book Now!</a>
+                <a href="#popup" className="btn btn--white">Book Now!</a>
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Tours() {
                   <p className="card-price-only">Only</p>
                   <p className="card-price-value">$897</p>
                 </div>
-                <a href="#" className="btn btn--white">Book Now!</a>
+                <a href="#popup" className="btn btn--white">Book Now!</a>
               </div>
             </div>
           </div>
