@@ -5,6 +5,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 
 // MEDIA QUERIES MANAGER
 // phone : 0 - 600px

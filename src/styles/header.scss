@@ -53,6 +53,11 @@
     animation-timing-function: ease-out;
     /* animation-iteration-count: 3; */
     /* animation-delay: 3s; */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   
   &--sub {
@@ -62,6 +67,10 @@
     letter-spacing: 1.75rem;
   
     animation: moveInRight 4s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 

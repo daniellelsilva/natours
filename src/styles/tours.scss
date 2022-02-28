@@ -1,4 +1,5 @@
 @import './abstracts//variables.scss';
+@import './abstracts/mixins.scss';
 
 @import './components/button.scss';
 
@@ -9,10 +10,9 @@
 }
 
 .tours-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @include flexRow;
   width: 100%;
+  
 }
 
 .card {
@@ -23,6 +23,12 @@
   position: relative;
   height: 50rem;
   margin-inline: 3%;
+
+  @include respond(tab-port) {
+    margin: auto;
+    margin-bottom: 6rem;
+    width: 50%;
+  }
 
   &-side {
     height: 52rem;
@@ -38,6 +44,10 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include respond(tab-port) {
+      margin: auto;
+    }
 
     &-front {
       background-color: $color-white;

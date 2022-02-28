@@ -1,4 +1,5 @@
 @import './abstracts//variables.scss';
+@import './abstracts/mixins.scss';
 
 .section-about {
   background-color: $color-grey-light-1;
@@ -15,22 +16,41 @@
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
+  
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+  
 }
 
 .about-text-image-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @include flexRow;
+  background-color: aqua;
+  
   margin-top: 8rem;
-  max-width: 100%;
+  width: 100%;
 
   .text-content {
     margin-right: 2%;
     width: 38%;
+
+    @include respond(tab-port) {
+      margin: auto;
+      width: 90%;
+    }
   }
 
   .image-content {
     width: 40%;
+
+    @include respond(tab-port) {
+      margin: auto;
+      width: 90%;
+    }
   }
 }
 
