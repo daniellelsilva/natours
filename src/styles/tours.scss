@@ -42,6 +42,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    background-color: $color-white;
 
     @include respond(tab-port) {
       margin: auto;
@@ -177,24 +178,36 @@
     font-weight: 100;
   }
 
+
+
   @include respond(tab-port) {
     margin: auto;
     margin-bottom: 6rem;
     height: auto;
     width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    background-color: $color-white;
     
   
     &-side {
       height: auto;   
       position: relative;
+      border-radius: 3px;
+      box-shadow: none;
+      background-color: $color-white;
   
       &-back {
         transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
     }
   
     &:hover &-side-front {
       transform: rotateY(-180deg);
+    }
+
+    &-details {
+      padding: 1rem 3rem;
     }
   
     // BACK SIDE
@@ -204,10 +217,11 @@
       left: 0;
       transform: translate(0);
       width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
     }
   
     &-price-box {
-      margin-bottom: 8rem;
+      margin-bottom: 3rem;
     }
   
     &-price-only {
@@ -215,7 +229,7 @@
     }
   
     &-price-value {
-      font-size: 6rem;
+      font-size: 5rem;
     }
   }
 }
