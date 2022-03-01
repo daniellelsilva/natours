@@ -28,12 +28,6 @@
   height: 50rem;
   margin-inline: 3%;
 
-  @include respond(tab-port) {
-    margin: auto;
-    margin-bottom: 6rem;
-    width: 50%;
-  }
-
   &-side {
     height: 52rem;
     margin-inline: 5%;
@@ -181,6 +175,48 @@
   &-price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  @include respond(tab-port) {
+    margin: auto;
+    margin-bottom: 6rem;
+    height: auto;
+    width: 50%;
+    
+  
+    &-side {
+      height: auto;   
+      position: relative;
+  
+      &-back {
+        transform: rotateY(0);
+      }
+    }
+  
+    &:hover &-side-front {
+      transform: rotateY(-180deg);
+    }
+  
+    // BACK SIDE
+    &-cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+    }
+  
+    &-price-box {
+      margin-bottom: 8rem;
+    }
+  
+    &-price-only {
+      font-size: 1.4rem;
+    }
+  
+    &-price-value {
+      font-size: 6rem;
+    }
   }
 }
 
