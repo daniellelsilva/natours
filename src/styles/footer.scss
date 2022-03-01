@@ -24,6 +24,10 @@
   &-logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &-logo {
@@ -37,8 +41,9 @@
     display: inline-block;
 
     @include respond(tab-port) {
-      width: 100%;
+      width: 80%;
       text-align: center;
+      margin: 0 auto 6rem;
     }
   }
 
@@ -82,13 +87,17 @@
 
 
     @include respond(tab-port) {
-      width: 100%;
+      width: 80%;
+      float: none;
+      margin: auto;
+      
     }
   }
 }
 
 .col-1-of-2 {
   width: calc((100% - 20rem)/2);
+  text-align: center;
 
   @include respond(tab-port) {
     width: 100%;
