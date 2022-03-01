@@ -21,7 +21,7 @@ export default function Stories() {
       </div>
 
       <div className="u-center-text">
-          <h2 className="heading-secondary" >
+          <h2 className="heading-secondary" id="stories" >
             We make people genuinely happy
           </h2>
         </div>

@@ -6,7 +6,7 @@ import '../styles/header.scss';
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div className="header__logo-box">
       {/* <Icon icon="lucide:mountain" /> */}
       <img src={mountain} alt='logo' className="header__logo" />
@@ -18,7 +18,7 @@ export default function Header() {
           <span className="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a href='#' className="btn btn--white btn--animated">Discover our tours</a>
+        <a href='#tours' className="btn btn--white btn--animated">Discover our tours</a>
       </div>
 
       

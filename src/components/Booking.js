@@ -6,10 +6,10 @@ export default function Booking() {
     <section className="section-book">
       <div className='div-book'>
         <div className="book">
-         <div className="book-form">
+         <div className="book-form" id="booking">
            {/* title */}
           <div >
-            <h2 className="heading-secondary" >
+            <h2 className="heading-secondary">
               Start booking now
            </h2>
          </div>

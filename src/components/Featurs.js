@@ -5,7 +5,7 @@ import '../styles/featurs.scss';
 
 export default function Featurs() {
   return (
-    <section className="section-featurs" >
+    <section className="section-featurs" id="featurs" >
       <div className="div-featurs">
       <div className="featurs-individual-card">
         <i className="bi bi-globe featurs-icon" />

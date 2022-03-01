@@ -6,7 +6,7 @@ export default function Tours() {
   return (
     <section className="section-tours">
       <div className="u-center-text">
-          <h2 className="heading-secondary" >
+          <h2 className="heading-secondary" id="tours" >
             Most popular tours
           </h2>
         </div>

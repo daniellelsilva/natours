@@ -13,9 +13,9 @@ import nature3 from '../images/nat-3-large.jpg';
 export default function About() {
   return (
     <main>
-      <section className="section-about" >
+      <section className="section-about">
         <div className="u-center-text">
-          <h2 className="heading-secondary" >
+          <h2 className="heading-secondary" id="about">
             Exciting tours for adventurous people
           </h2>
         </div>

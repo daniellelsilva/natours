@@ -19,8 +19,9 @@
   padding: 20rem 0;
   transform: skewY(7deg);
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     padding: 15rem 0;
+    flex-direction: column;
   }
 
 }
@@ -36,7 +37,7 @@
   width: 14%;
   transition: transform .3s;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     margin: auto;
     margin-bottom: 6rem;
     width: 50%;
