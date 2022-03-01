@@ -57,15 +57,29 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
   }
 
   &-left {
     width: 33.3%;
+    
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &-right {
     padding: 3rem 5rem;
     width: 66.6%;
+
+    @include respond(tab-port) {
+      margin: auto;
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
   }
 
   &-image {
@@ -84,6 +98,10 @@
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
+
+    @include respond(tab-port) {
+      column-count: 1;
+    }
 
     -moz-hyphens: auto;
     -ms-hyphens: auto;
