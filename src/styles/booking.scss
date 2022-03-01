@@ -1,9 +1,14 @@
 @import './abstracts//variables.scss';
+@import './abstracts/mixins.scss';
 
 .section-book {
   padding: 15rem 0;
   position: relative;
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .div-book {

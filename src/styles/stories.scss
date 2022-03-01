@@ -1,9 +1,15 @@
 @import './abstracts//variables.scss';
+@import './abstracts/mixins.scss';
+
 @import './components/bg-video.scss';
 
 .stories-section {
   padding: 15rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .story {

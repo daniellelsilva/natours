@@ -5,6 +5,10 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0 38rem;
   margin-top: -20vh;
+
+  // @include respond(tab-port) {
+  //   padding: 25rem 0 33rem;
+  // }
 }
 
 .heading-secondary {
@@ -79,6 +83,10 @@
     transition: all .2s;
     // espaço entre a imagem e outline
     outline-offset: 2rem;
+
+    @include respond(tab-port) {
+      width: 20%;
+    }
 
     &--p1 {
       left: 0;
