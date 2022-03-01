@@ -18,7 +18,7 @@ export default function Booking() {
 
             <div className="form-group">
               <input className="form-input" type="text" placeholder="Full Name" id="name" required />
-              <label for="name" className="form-label">Full Name</label>
+              <label htmlFor="name" className="form-label">Full Name</label>
             </div>
 
             <div className="form-group">
