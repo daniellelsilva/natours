@@ -18,14 +18,29 @@
 
 .book {
   background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 49.9%, transparent 50%) ,url(../images/nat-10.jpg);
-  background-size: 100%;
+  background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-  height: 55rem;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 64.8%, transparent 65%) ,url(../images/nat-10.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(to right, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%) ,url(../images/nat-10.jpg);
+  }
 
   &-form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
 
@@ -48,6 +63,10 @@
     // setar cor transparente aqui para não desconfigurar quando a border aparece no focus
     border-bottom: 3px solid transparent;
     transition: all .4s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
       &::-webkit-input-placeholder {
         color: $color-grey-dark-1;
@@ -85,6 +104,11 @@
   &-radio-group {
     width: 50%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &-radio-input {
