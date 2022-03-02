@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className='col-1-of-2'>
-          <p className="footer-copyright">Site feito por <a href='#' className="footer-link">Danielle Silva</a> no curso de <a href='#' className="footer-link">CSS avançado e Sass</a> fornecido pela Udemy e ministrado por <a href='#' className="footer-link">Jonas Schmedtmann</a></p>
+          <p className="footer-copyright">Site feito por <a href='https://daniellelsilva.github.io/react-portfolio/#/' className="footer-link" target="_blank" rel="noreferrer">Danielle Silva</a> durante curso de <a href='https://www.udemy.com/course/advanced-css-and-sass/' className="footer-link" target="_blank" rel="noreferrer">CSS avançado e Sass</a> fornecido pela Udemy e ministrado por <a href='https://github.com/jonasschmedtmann' className="footer-link" target="_blank" rel="noreferrer">Jonas Schmedtmann</a></p>
         </div>
       </div>
     </footer>

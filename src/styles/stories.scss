@@ -54,6 +54,7 @@
       // o elemento deve ser float e com largura e altura definidos, senão não funciona, está fazendo o texto se adaptar ao circulo
       -webkit-shape-outsie: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
     }
 
     @include respond(phone) {
