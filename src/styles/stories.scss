@@ -42,15 +42,19 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    // o elemento deve ser float e com largura e altura definidos, senão não funciona, está fazendo o texto se adaptar ao circulo
-    -webkit-shape-outsie: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
     // tirou o bug da imagem causado pelo skew
     overflow: hidden;
-
-    clip-path: circle(50% at 50% 50%);
     // como elemento está com float, melhor não suar margin para dar espaçamento, usar transform => tranlateX
     transform: translateX(-3rem) skewX(12deg);
+    border-radius: 50%;
+
+    @supports (clip-path: circle(0 0)) or (-webkit-clip-path: circle(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      // o elemento deve ser float e com largura e altura definidos, senão não funciona, está fazendo o texto se adaptar ao circulo
+      -webkit-shape-outsie: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
