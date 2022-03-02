@@ -46,7 +46,7 @@ export default function About() {
               <img
                 src={nature1}
                 srcSet={`${nature1small} 300w, ${nature1} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                sizes="(max-width: 56.2em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Nature 1"
                 className='composition__photo composition__photo--p1'
               />
@@ -54,7 +54,7 @@ export default function About() {
               <img
                 src={nature2}
                 srcSet={`${nature2small} 300w, ${nature2} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                sizes="(max-width: 56.2em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Nature 2"
                 className='composition__photo composition__photo--p2'
               />
@@ -62,7 +62,7 @@ export default function About() {
               <img
                 src={nature3}
                 srcSet={`${nature3small} 300w, ${nature3} 1000w`}
-                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                sizes="(max-width: 56.2em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 alt="Nature 3"
                 className='composition__photo composition__photo--p3'
               />
