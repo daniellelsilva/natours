@@ -7,8 +7,11 @@ import '../styles/components/button.scss';
 import '../styles/about.scss';
 
 import nature1 from '../images/nat-1-large.jpg';
+import nature1small from '../images/nat-1.jpg';
 import nature2 from '../images/nat-2-large.jpg';
+import nature2small from '../images/nat-2.jpg';
 import nature3 from '../images/nat-3-large.jpg';
+import nature3small from '../images/nat-3.jpg';
 
 export default function About() {
   return (
@@ -40,9 +43,33 @@ export default function About() {
 
           <div className="image-content">
             <div className="composition">
-              <img src={nature1} alt="Nature 1" className='composition__photo composition__photo--p1' />
+              <img
+                src={nature1}
+                srcSet={`${nature1small} 300w, ${nature1} 1000w`}
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Nature 1"
+                className='composition__photo composition__photo--p1'
+              />
+
+              <img
+                src={nature2}
+                srcSet={`${nature2small} 300w, ${nature2} 1000w`}
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Nature 2"
+                className='composition__photo composition__photo--p2'
+              />
+
+              <img
+                src={nature3}
+                srcSet={`${nature3small} 300w, ${nature3} 1000w`}
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Nature 3"
+                className='composition__photo composition__photo--p3'
+              />
+
+              {/* <img src={nature1} alt="Nature 1" className='composition__photo composition__photo--p1' />
               <img src={nature2} alt="Nature 2" className='composition__photo composition__photo--p2' />
-              <img src={nature3} alt="Nature 3" className='composition__photo composition__photo--p3' />
+              <img src={nature3} alt="Nature 3" className='composition__photo composition__photo--p3' /> */}
             </div>
           </div>
 

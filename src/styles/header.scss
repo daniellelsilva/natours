@@ -7,13 +7,19 @@
 
 .header {
   height: 95vh;
-  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../images/hero.jpg');
+  background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../images/hero-small.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
 
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  // quando a resolucao for maior que 192dpi e width maior que 600, OU se for maior q 2k px, a condição será aplicada
+  // media queries sempre em "em" 600px/16 = 37.5, 2000pc/16=125
+  @media(min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em)  {
+    background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../images/hero.jpg');
+  }
 
   @include respond(tab-port) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
