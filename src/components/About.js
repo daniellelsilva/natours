@@ -66,10 +66,6 @@ export default function About() {
                 alt="Nature 3"
                 className='composition__photo composition__photo--p3'
               />
-
-              {/* <img src={nature1} alt="Nature 1" className='composition__photo composition__photo--p1' />
-              <img src={nature2} alt="Nature 2" className='composition__photo composition__photo--p2' />
-              <img src={nature3} alt="Nature 3" className='composition__photo composition__photo--p3' /> */}
             </div>
           </div>
 
